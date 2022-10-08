@@ -1,1 +1,9 @@
-
+data/
+make_dataset.py
+features/
+build_features.py
+models/
+predict_model.py
+train_model.py
+visualization/
+visualize.py
