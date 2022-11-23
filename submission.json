@@ -1,0 +1,4 @@
+{
+    "dockerhub-id": "n6jiang/methodology3:latest",
+    "build-script": "python run.py"
+}
