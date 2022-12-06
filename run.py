@@ -11,6 +11,7 @@ from q1 import create_ranks
 from q1 import rank_plot
 
 def main(targets):
+    print(targets)
     df = get_data(targets)
     average_price(df)
     model(df)
