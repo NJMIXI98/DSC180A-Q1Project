@@ -9,14 +9,18 @@ from q1 import model
 from q1 import plot
 from q1 import create_ranks
 from q1 import rank_plot
+from q1 import price_row
+from q1 import price
+from q1 import locate
 
 def main(targets):
     if 'all' in targets:
         print("I put raw data in google drive!")
         
     if 'test' in targets:
-        with open('test/test.json') as fh:
-            df = get_data(fh)   
+        #with open('test/test.json') as fh:
+            #df = get_data(fh)  
+        df = get_data('test/test.json')
         average_price(df)
         model(df)
         plot(df)
