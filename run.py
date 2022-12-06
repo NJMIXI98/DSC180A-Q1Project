@@ -31,6 +31,8 @@ def main(targets):
         race_ranks = create_ranks(df,'ethnicity')
         print(rank_plot(gender_ranks))
         print(rank_plot(race_ranks))
+        rank_plot(gender_ranks)
+        rank_plot(race_ranks)
         plt.show()
       
 
