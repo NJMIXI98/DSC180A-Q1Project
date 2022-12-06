@@ -11,17 +11,19 @@ from q1 import create_ranks
 from q1 import rank_plot
 
 def main(targets):
+    if 'all' in targets:
+        print("I put raw data in google drive!")
+        
     if 'test' in targets:
         with open('test/test.json') as fh:
-            df = get_data(fh)
-           
-    average_price(df)
-    model(df)
-    plot(df)
-    gender_ranks = create_ranks(df,'gender')
-    race_ranks = create_ranks(df,'ethnicity')
-    rank_plot(gender_ranks)
-    rank_plot(race_ranks)
+            df = get_data(fh)   
+        average_price(df)
+        model(df)
+        plot(df)
+        gender_ranks = create_ranks(df,'gender')
+        race_ranks = create_ranks(df,'ethnicity')
+        rank_plot(gender_ranks)
+        rank_plot(race_ranks)
     
 
 if __name__ == '__main__':
