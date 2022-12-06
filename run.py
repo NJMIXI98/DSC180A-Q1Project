@@ -13,7 +13,7 @@ from q1 import rank_plot
 def main(targets):
     if 'test' in targets:
         with open('test/test.json') as fh:
-            df = get_data(targets)
+            df = get_data(fh)
            
     average_price(df)
     model(df)
