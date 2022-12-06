@@ -24,14 +24,10 @@ def main(targets):
         print(a)
         b= model(df)
         print(b)
-        
         print(plot(df))
-        plot(df)
-        plt.show()
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
         print(rank_plot(gender_ranks))
-        plt.show()
         print(rank_plot(race_ranks))
         plt.show()
       
