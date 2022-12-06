@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import numpy as np
 import pandas as pd
@@ -13,18 +11,12 @@ from statsmodels.graphics.factorplots import interaction_plot
 import matplotlib.pyplot as plt
 
 
-# In[2]:
-
-
 def price_row(row):
     if len(row['ranking'])>0:
         if 'price' in row['ranking'][0]:
             return row['ranking']
     else:
         return '0'
-
-
-# In[3]:
 
 
 def price(row):
@@ -41,9 +33,6 @@ def price(row):
     return ls
 
 
-# In[4]:
-
-
 def locate(row):
     for i in row['position']:
         if i is not None and type(i) is dict:
@@ -55,10 +44,6 @@ def locate(row):
                     return 'Chicago'
                 else:
                     return None
-
-
-# In[5]:
-
 
 def get_data(outfir):
     df = pd.read_json(outfir, lines=True)
@@ -74,33 +59,19 @@ def get_data(outfir):
     df['price_mean'] = df.apply(lambda row: round(mean(row['price'])) , axis=1)
     return df
 
-
-# In[6]:
-
-
 def average_price(df):
     get = df.groupby(['scraper','locality','gender', 'ethnicity']).agg({'price_mean': ['mean']}).astype(int)
     return get
-
-
-# In[7]:
-
 
 def model(df):
     out = ols('price_mean ~ C(gender) + C(ethnicity) + C(gender):C(ethnicity)', data=df).fit()
     return sm.stats.anova_lm(out, typ=2)
 
 
-# In[14]:
-
-
 def plot(df):
     fig = interaction_plot(x=df['ethnicity'], trace=df['gender'], response=df['price_mean'], 
     colors=['#d17a22', '#4c061d'])
     return plt.show()
-
-
-# In[26]:
 
 
 def create_ranks(df,rk):
@@ -111,16 +82,11 @@ def create_ranks(df,rk):
     return ranks
 
 
-# In[24]:
-
-
 def rank_plot(ranks):
-    ranks.T.plot()
     plt.xlabel('Ranking')
     plt.ylabel('Average Price')
-
-
-# In[ ]:
+    return ranks.T.plot()
+    
 
 
 
