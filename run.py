@@ -30,15 +30,13 @@ def main(targets):
         print(c)
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
-        fig = interaction_plot(x=df['ethnicity'], trace=df['gender'], response=df['price_mean'], 
-                               colors=['#d17a22', '#4c061d'])
-        plt.show()
-        gender_ranks.T.plot()
-        plt.xlabel('Ranking')
-        plt.ylabel('Average Price')
-        race_ranks.T.plot()
-        plt.xlabel('Ranking')
-        plt.ylabel('Average Price')
+        #fig = interaction_plot(x=df['ethnicity'], trace=df['gender'], response=df['price_mean'], 
+                               #colors=['#d17a22', '#4c061d'])
+        #plt.show()
+        d= rank_plot(gender_ranks)
+        print(d)
+        e= rank_plot(race_ranks)
+        print(e)
       
 
 if __name__ == '__main__':
