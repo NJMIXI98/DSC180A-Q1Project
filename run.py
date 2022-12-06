@@ -3,9 +3,12 @@
 import sys
 import json
 
-from etl import get_data
-from etl import average_price
-from etl import model
+from q1 import get_data
+from q1 import average_price
+from q1 import model
+from q1 import plot
+from q1 import create_ranks
+from q1 import rank_plot
 
 def main(targets):
     df = get_data(targets)
