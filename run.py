@@ -23,16 +23,14 @@ def main(targets):
         print(a)
         b= model(df)
         print(b)
-        c= plot(df)
+        plot(df)
         plt.show()
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
-        d= rank_plot(gender_ranks)
+        rank_plot(gender_ranks)
         plt.show()
-        #print(d)
-        e= rank_plot(race_ranks)
+        rank_plot(race_ranks)
         plt.show()
-        #print(e)
       
 
 if __name__ == '__main__':
