@@ -27,16 +27,15 @@ def main(targets):
         b= model(df)
         print(b)
         c= plot(df)
-        print(c)
+        plot.show()
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
-        #fig = interaction_plot(x=df['ethnicity'], trace=df['gender'], response=df['price_mean'], 
-                               #colors=['#d17a22', '#4c061d'])
-        #plt.show()
         d= rank_plot(gender_ranks)
-        print(d)
+        plot.show()
+        #print(d)
         e= rank_plot(race_ranks)
-        print(e)
+        plot.show()
+        #print(e)
       
 
 if __name__ == '__main__':
