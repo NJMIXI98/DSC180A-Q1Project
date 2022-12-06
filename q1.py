@@ -71,7 +71,7 @@ def model(df):
 def plot(df):
     fig = interaction_plot(x=df['ethnicity'], trace=df['gender'], response=df['price_mean'], 
     colors=['#d17a22', '#4c061d'])
-    return fig.show()
+    return fig
 
 
 def create_ranks(df,rk):
@@ -85,7 +85,7 @@ def create_ranks(df,rk):
 def rank_plot(ranks):
     plt.xlabel('Ranking')
     plt.ylabel('Average Price')
-    return ranks.T.plot().show()
+    return ranks.T.plot()
     
 
 
