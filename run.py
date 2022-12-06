@@ -2,8 +2,6 @@
 
 import sys
 import json
-import matplotlib
-matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 from q1 import get_data
