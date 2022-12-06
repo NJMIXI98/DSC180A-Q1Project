@@ -2,6 +2,8 @@
 
 import sys
 import json
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 from q1 import get_data
@@ -25,6 +27,8 @@ def main(targets):
         b= model(df)
         print(b)
         print(plot(df))
+        plot(df)
+        plt.show()
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
         print(rank_plot(gender_ranks))
