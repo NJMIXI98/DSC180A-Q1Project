@@ -2,6 +2,7 @@
 
 import sys
 import json
+import matplotlib.pyplot as plt
 
 from q1 import get_data
 from q1 import average_price
