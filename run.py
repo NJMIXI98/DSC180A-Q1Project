@@ -22,14 +22,19 @@ def main(targets):
             #df = get_data(fh)  
         print('1111111')
         df = get_data('test/test.json')
-        average_price(df)
-        model(df)
-        plot(df)
+        a= average_price(df)
+        print(a)
+        b= model(df)
+        print(b)
+        c= plot(df)
+        print(c)
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
-        rank_plot(gender_ranks)
-        rank_plot(race_ranks)
-    
+        d= rank_plot(gender_ranks)
+        print(d)
+        e= rank_plot(race_ranks)
+        print(e)
+      
 
 if __name__ == '__main__':
     targets = sys.argv[1:]
