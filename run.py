@@ -2,6 +2,7 @@
 
 import sys
 import json
+%matplotlibe inline
 import matplotlib.pyplot as plt
 
 from q1 import get_data
@@ -24,8 +25,10 @@ def main(targets):
         print(a)
         b= model(df)
         print(b)
+        
         print(plot(df))
-        #plt.show()
+        plot(df)
+        plt.show()
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
         rank_plot(gender_ranks)
