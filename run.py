@@ -26,14 +26,16 @@ def main(targets):
         print(b)
         print(plot(df))
         plot(df)
-        plt.show()
+        plt.show(block=False)
         gender_ranks = create_ranks(df,'gender')
         race_ranks = create_ranks(df,'ethnicity')
         print(rank_plot(gender_ranks))
         print(rank_plot(race_ranks))
         rank_plot(gender_ranks)
         rank_plot(race_ranks)
-        plt.show()
+        plt.xlabel('Ranking')
+        plt.ylabel('Average Price')
+        plt.show(block=False)
       
 
 if __name__ == '__main__':
