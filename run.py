@@ -20,6 +20,7 @@ def main(targets):
     if 'test' in targets:
         #with open('test/test.json') as fh:
             #df = get_data(fh)  
+        print('1111111')
         df = get_data('test/test.json')
         average_price(df)
         model(df)
